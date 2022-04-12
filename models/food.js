@@ -11,6 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Food.belongsTo(models.User, { foreignKey: 'listId' })
     }
   }
   Food.init({

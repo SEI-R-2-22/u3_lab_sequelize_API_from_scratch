@@ -12,6 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       List.belongsTo(models.User, { foreignKey: 'userId' })
+      List.hasMany(models.Food, { foreignKey: 'listId' })
     }
   }
   List.init({
