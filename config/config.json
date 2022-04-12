@@ -1,0 +1,20 @@
+{
+  "development": {
+
+    "database": "albums_have_songs",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+   
+    "database": "albums_have_songs",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+  
+    "database": "albums_have_songs",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
