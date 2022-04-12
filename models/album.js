@@ -1,7 +1,6 @@
 'use strict';
-const {
-  Model
-} = require('sequelize');
+const {Model} = require('sequelize');
+
 module.exports = (sequelize, DataTypes) => {
   class Album extends Model {
     /**
@@ -15,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
         onDelete: 'CASCADE',
         onUpdate: 'CASCADE'
       })
-      Album.belongsTo(models.Artist, {
+      Album.belongsTo(models.Band, {
         foreignKey: 'band_id',
         onDelete: 'CASCADE',
         onUpdate: 'CASCADE'
