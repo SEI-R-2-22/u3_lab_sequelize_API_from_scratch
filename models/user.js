@@ -19,13 +19,7 @@ module.exports = (sequelize, DataTypes) => {
     firstName: DataTypes.STRING,
     lastName: DataTypes.STRING,
     email: DataTypes.STRING,
-    listId: {
-      type: DataTypes.INTEGER,
-      onDelete: 'CASCADE',
-      references: {
-        model: 'list',
-        key: 'id'
-      }}
+    
   }, {
     sequelize,
     modelName: 'User',
@@ -33,3 +27,4 @@ module.exports = (sequelize, DataTypes) => {
   });
   return User;
 };
+
