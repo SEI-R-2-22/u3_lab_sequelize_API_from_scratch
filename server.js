@@ -2,7 +2,7 @@ const app = require('express')()
 const cors = require('cors')
 const express = require('express')
 
-AppRouter = required('./routes/AppRouter')
+const AppRouter = require('./routes/AppRouter')
 
 const PORT = process.env.PORT || 3001
 
