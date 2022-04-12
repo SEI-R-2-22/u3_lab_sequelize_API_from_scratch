@@ -2,11 +2,6 @@
 const { Model } = require('sequelize')
 module.exports = (sequelize, DataTypes) => {
   class Season extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
     static associate(models) {
       Season.belongsTo(models.Garden, {
         foreignKey: 'garden_id',
@@ -33,7 +28,7 @@ module.exports = (sequelize, DataTypes) => {
     {
       sequelize,
       modelName: 'Season',
-      tableName: 'comments'
+      tableName: 'seasons'
     }
   )
   return Season
