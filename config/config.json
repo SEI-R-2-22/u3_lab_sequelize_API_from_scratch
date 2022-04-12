@@ -1,0 +1,20 @@
+{
+  "development": {
+    "database": "nfl_development",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "define": {
+      "underscored": true
+    }
+  },
+  "test": {
+    "database": "nfl_test",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "database": "nfl_production",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
