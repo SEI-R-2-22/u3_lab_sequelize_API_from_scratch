@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      Property.hasOne(models.Adress, {
+      Property.hasOne(models.Address, {
         foreignKey: 'propertyId',
         onDelete: 'CASCADE',
         onUpdate: 'CASCADE'
