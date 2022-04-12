@@ -1,4 +1,4 @@
-const Router = require('express').Router()
-const controller = require('../controllers/UserController')
+// const Router = require('express').Router()
+// const controller = require('../controllers/UserController')
 
-Router.get('/users/view', controller.GetAllUsers)
+// app.get('/view', controller.GetAllUsers)
