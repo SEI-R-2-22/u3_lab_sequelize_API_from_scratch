@@ -8,6 +8,15 @@ const GetUser = async (req, res) => {
     throw error
   }
 }
+const GetUserByPk = async (req, res) => {
+  try {
+    const userId = parseInt(req.params.user_id)
+    const users = await User.findByPk(userId)
+    res.send(users)
+  } catch (error) {
+    throw error
+  }
+}
 const CreateUser = async (req, res) => {
   try {
     const user = req.body
@@ -48,5 +57,6 @@ module.exports = {
   GetUser,
   CreateUser,
   UpdateUser,
-  DeleteUser
+  DeleteUser,
+  GetUserByPk
 }
