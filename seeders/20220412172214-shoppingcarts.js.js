@@ -10,12 +10,12 @@ module.exports = {
     const shoppingcart = await Promise.all(
       [...Array(30)].map(async () => {
         let user = await User.findOne({ order: sequelize.random() })
-        let product = await Product.findOne({ order: sequelize.random() })
+        // let product = await Product.findOne({ order: sequelize.random() })
         return {
           quantity: falso.randNumber(),
           price: falso.randNumber(),
           userId: user.id,
-          productId: product.id,
+          // productId: product.id,
           createdAt: new Date(),
           updatedAt: new Date()
         }

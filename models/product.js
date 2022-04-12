@@ -1,6 +1,6 @@
 'use strict'
 const { Model } = require('sequelize')
-const shoppingcart = require('./shoppingcart')
+const ShoppingCart = require('./shoppingcart')
 module.exports = (sequelize, DataTypes) => {
   class Product extends Model {
     /**
@@ -10,7 +10,10 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      // Product.belongsToMany(models.ShoppingCart, { through: Shopping_Product })
+      Product.belongsTo(models.ShoppingCart, {
+        foreignKey: 'shoppingCartId',
+        as: 'cart'
+      })
     }
   }
   Product.init(
@@ -19,16 +22,16 @@ module.exports = (sequelize, DataTypes) => {
       price: DataTypes.INTEGER,
       description: DataTypes.STRING,
       brand: DataTypes.STRING,
-      category: DataTypes.STRING
-      // shoppingCartId: {
-      //   type: DataTypes.INTEGER,
-      //   allowNull: false,
-      //   onDelete: 'CASCADE',
-      //   references: {
-      //     model: 'shopping_carts',
-      //     key: 'id'
-      //   }
-      // }
+      category: DataTypes.STRING,
+      shoppingCartId: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        onDelete: 'CASCADE',
+        references: {
+          model: 'shopping_carts',
+          key: 'id'
+        }
+      }
     },
     {
       sequelize,
