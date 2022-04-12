@@ -11,7 +11,9 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       Address.belongsTo(models.Property, {
-        foreignKey: 'propertyId'
+        foreignKey: 'propertyId',
+        onDelete: 'CASCADE',
+        onUpdate: 'CASCADE'
       })
     }
   }
