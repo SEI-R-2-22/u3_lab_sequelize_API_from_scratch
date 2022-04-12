@@ -1,6 +1,7 @@
 {
   "development": {
-
+    "username": "pregan17",
+    "password": "Jicket11",
     "database": "albums_have_songs",
     "host": "127.0.0.1",
     "dialect": "postgres"
