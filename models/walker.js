@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Walker.belongsTo(models.Dog, { foreignKey: dogId })
+      Walker.belongsTo(models.Dog, { foreignKey: 'dogId' })
     }
   }
   Walker.init(
@@ -17,12 +17,7 @@ module.exports = (sequelize, DataTypes) => {
       fullName: DataTypes.STRING,
       avatar: DataTypes.STRING,
       email: DataTypes.STRING,
-      fullAddress: DataTypes.STRING
-    },
-    {
-      sequelize,
-      modelName: 'Walker',
-      tableName: 'walkers',
+      fullAddress: DataTypes.STRING,
       dogId: {
         type: DataTypes.INTEGER,
         onDelete: 'CASCADE',
@@ -31,6 +26,11 @@ module.exports = (sequelize, DataTypes) => {
           key: 'id'
         }
       }
+    },
+    {
+      sequelize,
+      modelName: 'Walker',
+      tableName: 'walkers'
     }
   )
   return Walker

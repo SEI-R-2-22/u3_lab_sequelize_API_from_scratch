@@ -1,5 +1,5 @@
 'use strict'
-const { Model, INET } = require('sequelize')
+const { Model } = require('sequelize')
 module.exports = (sequelize, DataTypes) => {
   class Dog extends Model {
     /**
@@ -9,8 +9,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Dog.belongsTo(models.User, { foreignKey: userId })
-      Dog.hasOne(models.Walker, { foreignKey: dogId })
+      Dog.belongsTo(models.User, { foreignKey: 'userId' })
+      Dog.hasOne(models.Walker, { foreignKey: 'dogId' })
     }
   }
   Dog.init(

@@ -1,5 +1,5 @@
-const app = require('express')()
-const bodyParser = require('body-parser')
+const express = require('express')
+const app = express()
 const cors = require('cors')
 
 const AppRouter = require('./routes/AppRouter')
