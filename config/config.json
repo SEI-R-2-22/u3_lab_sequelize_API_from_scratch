@@ -1,0 +1,17 @@
+{
+  "development": {
+    "database": "workout_development",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "database": "workout_test",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "database": "workout_production",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
