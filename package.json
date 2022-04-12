@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Neoj1sec142/u3_lab_sequelize_API_from_scratch#readme",
   "dependencies": {
+    "@ngneat/falso": "^4.0.0",
     "body-parser": "^1.20.0",
     "cors": "^2.8.5",
     "express": "^4.17.3",

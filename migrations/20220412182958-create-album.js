@@ -25,12 +25,16 @@ module.exports = {
         }
       },
       createdAt: {
+        field: 'create_at',
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: new Date()
       },
       updatedAt: {
+        field: 'update_at',
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: new Date()
       }
     });
   },
