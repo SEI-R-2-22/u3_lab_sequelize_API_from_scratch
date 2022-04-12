@@ -11,7 +11,8 @@ const GetArtists = async (req, res) => {
 
 const GetArtistDetails = async (req, res) => {
   try {
-    const artistDetails = await Artist.findByPk(req.params.artist_id, {
+    let artistId = req.params.artist_id
+    const artistDetails = await Artist.findByPk(artistId, {
       include: [{ model: Album, as: 'albums' }]
     })
     res.send(albumDetails)
@@ -19,7 +20,45 @@ const GetArtistDetails = async (req, res) => {
     throw error
   }
 }
+
+const CreateArtist = async (req, res) => {
+  try {
+    const newArtist = {
+      ...req.body
+    }
+    let artist = await Artist.create(newArtist)
+    res.send(artist)
+  } catch (error) {
+    throw error
+  }
+}
+
+const UpdateArtist = async (req, res) => {
+  try {
+    let artistId = parseInt(req.params.artist_id)
+    let updatedArtist = await Artist.update(req.body, {
+      where: { id: artistId },
+      returning: true
+    })
+    res.send(updatedArtist)
+  } catch (error) {
+    throw error
+  }
+}
+
+const DestroyArtist = async (req, res) => {
+  try {
+    let artistId = parseInt(req.params.artist_id)
+    await Artist.destroy({ where: { id: artistId } })
+    res.send({ message: `ARTIST WITH ID OF ${artistId} HAS BEEN DESTROYED!!` })
+  } catch (error) {
+    throw error
+  }
+}
 module.exports = {
   GetArtists,
-  GetArtistDetails
+  GetArtistDetails,
+  CreateArtist,
+  UpdateArtist,
+  DestroyArtist
 }
