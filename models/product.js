@@ -10,10 +10,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Product.belongsToMany(models.ShoppingCart, {
-        foreignKey: 'shoppingCartId',
-        as: 'cart'
-      })
+      // Product.belongsToMany(models.ShoppingCart, { through: Shopping_Product })
     }
   }
   Product.init(
@@ -22,14 +19,16 @@ module.exports = (sequelize, DataTypes) => {
       price: DataTypes.INTEGER,
       description: DataTypes.STRING,
       brand: DataTypes.STRING,
-      category: DataTypes.STRING,
-      shoppingCartId: {
-        type: DataTypes.INTEGER,
-        references: {
-          model: 'shopping_carts',
-          key: 'id'
-        }
-      }
+      category: DataTypes.STRING
+      // shoppingCartId: {
+      //   type: DataTypes.INTEGER,
+      //   allowNull: false,
+      //   onDelete: 'CASCADE',
+      //   references: {
+      //     model: 'shopping_carts',
+      //     key: 'id'
+      //   }
+      // }
     },
     {
       sequelize,

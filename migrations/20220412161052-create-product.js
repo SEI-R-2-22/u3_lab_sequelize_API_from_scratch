@@ -23,6 +23,15 @@ module.exports = {
       category: {
         type: Sequelize.STRING
       },
+      // shoppingCartId: {
+      //   type: Sequelize.INTEGER,
+      //   allowNull: false,
+      //   onDelete: 'CASCADE',
+      //   reference: {
+      //     model: 'shopping_carts',
+      //     key: 'id'
+      //   }
+      // },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

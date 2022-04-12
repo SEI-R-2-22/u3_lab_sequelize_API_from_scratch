@@ -10,16 +10,17 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       ShoppingCart.belongsTo(models.User, { foreignKey: 'userId', as: 'owner' })
-      ShoppingCart.hasMany(models.Product, { foreignKey: 'shoppingCardId' })
+      // ShoppingCart.belongsToMany(models.Product, { through: Shopping_Product })
     }
   }
   ShoppingCart.init(
     {
-      productId: DataTypes.INTEGER,
       quantity: DataTypes.INTEGER,
       price: DataTypes.INTEGER,
       userId: {
         type: DataTypes.INTEGER,
+        allowNull: false,
+        onDelete: 'CASCADE',
         references: {
           model: 'users',
           key: 'id'
