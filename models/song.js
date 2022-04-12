@@ -22,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
       field: 'artist_id',
       onDelete: 'CASCADE',
       references: {
-        model: 'artistss',
+        model: 'artists',
         key: 'id'
       },
     },
@@ -39,6 +39,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'Song',
+    tableName: 'songs'
   });
   return Song;
 };
