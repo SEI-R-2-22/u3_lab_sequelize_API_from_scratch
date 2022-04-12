@@ -24,7 +24,15 @@ const addActorToMovie = async (req, res) => {
 }
 
 const deleteActorById = async (req, res) => {
-
+    try{
+        let actor_id = parseInt(req.params.actor_id)
+        await Actor.destroy({
+            where: {id: actor_id}
+        })
+        res.send({message: `Deleted movie with an id of ${actor_id}` })
+    }catch(error){
+        throw error
+    }
 }
 
 module.exports = {
