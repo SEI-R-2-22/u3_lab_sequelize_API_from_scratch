@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('pokemons', {
@@ -17,6 +17,9 @@ module.exports = {
       trainer: {
         type: Sequelize.STRING
       },
+      type: {
+        type: Sequelize.STRING
+      },
       region: {
         type: Sequelize.STRING
       },
@@ -28,9 +31,9 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE
       }
-    });
+    })
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('pokemons');
+    await queryInterface.dropTable('pokemons')
   }
-};
+}

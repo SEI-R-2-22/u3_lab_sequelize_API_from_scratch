@@ -25,8 +25,7 @@ module.exports = (sequelize, DataTypes) => {
     {
       name: DataTypes.STRING,
       id: DataTypes.INTEGER,
-      pokemon: DataTypes.STRING,
-      trainers: DataTypes.STRING
+      description: DataTypes.STRING
     },
     {
       sequelize,
