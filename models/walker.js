@@ -9,6 +9,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Walker.belongsTo(models.Dog, { foreignKey: dogId })
     }
   }
   Walker.init(
@@ -21,7 +22,15 @@ module.exports = (sequelize, DataTypes) => {
     {
       sequelize,
       modelName: 'Walker',
-      tableName: 'walkers'
+      tableName: 'walkers',
+      dogId: {
+        type: DataTypes.INTEGER,
+        onDelete: 'CASCADE',
+        references: {
+          model: 'dogs',
+          key: 'id'
+        }
+      }
     }
   )
   return Walker
