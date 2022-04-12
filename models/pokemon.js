@@ -20,12 +20,13 @@ module.exports = (sequelize, DataTypes) => {
       name: DataTypes.STRING,
       id: DataTypes.INTEGER,
       trainer: DataTypes.STRING,
+      type: DataTypes.STRING,
       region: DataTypes.STRING
     },
     {
       sequelize,
       modelName: 'Pokemon',
-      tableName: 'pokemons'
+      tableName: 'pokemon'
     }
   )
   return Pokemon

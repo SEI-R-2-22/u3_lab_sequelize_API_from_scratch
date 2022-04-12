@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
         onUpdate: 'CASCADE'
       })
       Trainer.hasMany(models.Pokemon, {
-        foreignKey: 'trainer_id',
+        foreignKey: 'region_id',
         onDelete: 'CASCADE',
         onUpdate: 'CASCADE'
       })

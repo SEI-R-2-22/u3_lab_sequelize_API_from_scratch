@@ -14,6 +14,12 @@ module.exports = {
       id: {
         type: Sequelize.INTEGER
       },
+      pokemon: {
+        type: Sequelize.STRING
+      },
+      trainers: {
+        type: Sequelize.STRING
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
