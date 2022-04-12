@@ -1,0 +1,11 @@
+{
+  "development": {
+    "username": "lawrenceol",
+    "password": "null",
+    "database": "grocery_list_database",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  } 
+}
+
+

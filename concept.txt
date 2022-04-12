@@ -1,0 +1,15 @@
+Grocery Shopping List Maker
+Users have many lists
+Lists have many foods
+
+Models:
+User
+List
+Food
+
+//Reach goals: Add date field to list. Add categories (ie dairy, produce) as another model and then as a dropdown field for food?
+ 
+sequelize model:generate --name Food --attributes name:string
+
+User has many Lists
+Lists have many foods
