@@ -11,6 +11,9 @@ module.exports = {
       name: {
         type: Sequelize.STRING
       },
+      id: {
+        type: Sequelize.INTEGER
+      },
       trainer: {
         type: Sequelize.STRING
       },

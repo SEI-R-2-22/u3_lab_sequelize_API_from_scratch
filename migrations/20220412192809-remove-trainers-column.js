@@ -6,6 +6,8 @@ module.exports = {
   },
 
   async down(queryInterface, Sequelize) {
-    return queryInterface.addColumn('regions', 'trainers', { transaction })
+    return queryInterface.addColumn('regions', 'trainers', {
+      type: Sequelize.STRING
+    })
   }
 }

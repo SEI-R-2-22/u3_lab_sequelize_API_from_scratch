@@ -6,6 +6,8 @@ module.exports = {
   },
 
   async down(queryInterface, Sequelize) {
-    return queryInterface.addColumn('pokemon', 'id', { transaction })
+    return queryInterface.addColumn('pokemon', 'id', {
+      type: Sequelize.INTEGER
+    })
   }
 }

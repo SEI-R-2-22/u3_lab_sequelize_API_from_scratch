@@ -326,10 +326,10 @@ const pokemon = [
 
 module.exports = {
   async up(queryInterface, Sequelize) {
-    return queryInterface.bulkInsert('pokemons', pokemon, {})
+    return queryInterface.bulkInsert('pokemon', pokemon, {})
   },
 
   async down(queryInterface, Sequelize) {
-    return queryInterface.bulkDelete('pokemons')
+    return queryInterface.bulkDelete('pokemon')
   }
 }

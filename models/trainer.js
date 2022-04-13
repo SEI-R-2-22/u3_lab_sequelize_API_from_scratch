@@ -22,8 +22,7 @@ module.exports = (sequelize, DataTypes) => {
   }
   Trainer.init(
     {
-      name: DataTypes.STRING,
-      id: DataTypes.INTEGER
+      name: DataTypes.STRING
     },
     {
       sequelize,
