@@ -1,0 +1,17 @@
+{
+  "development": {
+    "database": "recipe_db_development",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "database": "recipe_db_test",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "database": "recipe_db_production",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}

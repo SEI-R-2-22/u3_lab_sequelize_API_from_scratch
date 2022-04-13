@@ -1,0 +1,29 @@
+{
+  "name": "u3_lab_sequelize_api_from_scratch",
+  "version": "1.0.0",
+  "description": "![Baloo](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthumbs.gfycat.com%2FEmbellishedWideEastrussiancoursinghounds-size_restricted.gif&f=1&nofb=1)",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Job85/u3_lab_sequelize_API_from_scratch.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Job85/u3_lab_sequelize_API_from_scratch/issues"
+  },
+  "homepage": "https://github.com/Job85/u3_lab_sequelize_API_from_scratch#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "pg": "^8.7.3",
+    "sequelize": "^6.19.0"
+  }
+}
