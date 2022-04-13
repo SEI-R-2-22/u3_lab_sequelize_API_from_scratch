@@ -9,7 +9,7 @@ const GetFoods = async (req, res) => {
   }
 }
 
-//Unfortunately, not all foods have
+
 const GetFoodReviews = async (req, res) => {
   try {
     const foodAndReviews = await Food.findByPk(req.params.food_id, {
