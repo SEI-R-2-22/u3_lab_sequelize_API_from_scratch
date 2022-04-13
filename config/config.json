@@ -1,0 +1,21 @@
+{
+  "development": {
+    "database": "exotics_development",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "define": {
+      "underscored": true
+    }
+  },
+  "test": {
+    "database": "exotics_test",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "database": "exotics_production",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
+
