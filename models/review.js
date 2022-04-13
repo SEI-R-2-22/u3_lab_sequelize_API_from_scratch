@@ -11,13 +11,13 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       Review.belongsTo(models.User, {
-        foreignKey: 'userId',
+        foreignKey: 'truck_id',
         as: 'owner',
         onDelete: 'cascade',
         onUpdate: 'cascade'
       })
       Review.belongsTo(models.Truck, {
-        foreignKey: 'truckId',
+        foreignKey: 'truck_id',
         as: 'truck',
         onDelete: 'CASCADE',
         onUpdate: 'CASCADE'
@@ -31,7 +31,7 @@ module.exports = (sequelize, DataTypes) => {
     userId: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      field: 'userId',
+      field: 'user_id',
       onDelete: 'CASCADE',
       references: {
         model: 'users',
@@ -41,7 +41,7 @@ module.exports = (sequelize, DataTypes) => {
     truckId: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      field: 'userId',
+      field: 'truck_id',
       onDelete: 'CASCADE',
       references: {
         model: 'trucks',

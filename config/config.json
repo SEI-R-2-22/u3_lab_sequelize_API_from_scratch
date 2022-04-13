@@ -4,20 +4,29 @@
     "password": "nghiem",
     "database": "truck_development",
     "host": "127.0.0.1",
-    "dialect": "postgres"
+    "dialect": "postgres",
+    "define": {
+      "timestamps": false
+    }
   },
   "test": {
     "username": "nghiem",
     "password": "nghiem",
     "database": "truck_test",
     "host": "127.0.0.1",
-    "dialect": "postgres"
+    "dialect": "postgres",
+    "define": {
+      "timestamps": false
+    }
   },
   "production": {
     "username": "nghiem",
     "password": "nghiem",
     "database": "truck_production",
     "host": "127.0.0.1",
-    "dialect": "postgres"
+    "dialect": "postgres",
+    "define": {
+      "timestamps": false
+    }
   }
 }

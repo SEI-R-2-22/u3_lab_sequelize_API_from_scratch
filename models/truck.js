@@ -11,9 +11,15 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      Truck.belongsToMany(models.User, {
-        foreignKey: 'userId',
+      Truck.belongsTo(models.User, {
+        foreignKey: 'user_id',
         as: 'subscriber',
+        onDelete: 'cascade',
+        onUpdate: 'cascade'
+      })
+      Truck.hasMany(models.Review,  {
+        foreignKey: 'truck_id',
+        as: 'reviews',
         onDelete: 'cascade',
         onUpdate: 'cascade'
       })
@@ -27,7 +33,7 @@ module.exports = (sequelize, DataTypes) => {
     userId: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      field: 'userId',
+      field: 'user_id',
       onDelete: 'CASCADE',
       references: {
         model: 'users',

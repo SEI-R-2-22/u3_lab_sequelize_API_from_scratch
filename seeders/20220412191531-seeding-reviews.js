@@ -7,29 +7,25 @@ module.exports = {
     
     const reviews = await Promise.all(
       [...Array(1000)].map( async () => {
-        let user = await User.findOne({ order: sequelize.randome(), raw: true})
+        let user = await User.findOne({ order: sequelize.random(), raw: true})
         let truck = await Truck.findOne({
           order: sequelize.random(),
-          where: { ownerId: { [Op.not]: user.id } },
+          where: { user_id: { [Op.not]: user.id } },
           raw: true
         })
         return {
           name: user.firstName,
-          rating: Math.floor(Math.random() * 5 +1),
-          content: falso.randParagraph(),
-          owner_id: user.id,
+          rating: falso.randNumber({ min: 1, max: 5 }),
+          content: falso.randFirstName(),
+          user_id: user.id,
           truck_id: truck.id
         }
       })
     )
+    return queryInterface.bulkInsert('reviews', reviews)
   },
 
   async down (queryInterface, Sequelize) {
-    /**
-     * Add commands to revert seed here.
-     *
-     * Example:
-     * await queryInterface.bulkDelete('People', null, {});
-     */
+    return queryInterface.bulkDelete()
   }
 };
