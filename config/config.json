@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "tylus",
+    "password": "MadWizard1508!",
+    "database": "dogsDB",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "tylus",
+    "password": "MadWizard1508!",
+    "database": "dogsDB",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "tylus",
+    "password": "MadWizard1508!",
+    "database": "dogsDB",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
