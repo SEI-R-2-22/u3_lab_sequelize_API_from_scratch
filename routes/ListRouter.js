@@ -1,6 +1,5 @@
-const { Lister } = require('../models')
+const { List } = require('../models')
 
 
 
 
-module.exports = Router
