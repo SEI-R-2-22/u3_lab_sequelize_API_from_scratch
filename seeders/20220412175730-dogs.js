@@ -5,7 +5,7 @@ const falso = require('@ngneat/falso')
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     const b = await User.findAll({ raw: true })
-    const dogs = [...Array(10)].map((_) => {
+    const dogs = [...Array(50)].map((_) => {
       let r = Math.floor(Math.random() * b.length)
       return {
         breed: falso.randDog(),
