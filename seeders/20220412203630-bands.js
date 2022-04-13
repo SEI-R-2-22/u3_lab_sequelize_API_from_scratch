@@ -1,9 +1,10 @@
 'use strict';
 const falso = require('@ngneat/falso');
 
-const bands = [...Array(100)].map(() => ({
+const bands = [...Array(3)].map(() => ({
   name: falso.randFirstName(),
   artists: falso.randPassword(),
+
 }))
 module.exports = {
   up : async(queryInterface, Sequelize) => {

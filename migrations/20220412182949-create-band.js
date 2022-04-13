@@ -15,14 +15,14 @@ module.exports = {
         type: Sequelize.STRING
       },
       createdAt: {
-        field: 'create_at',
-        allowNull: false,
+        field: 'createdAt',
+        allowNull: true,
         type: Sequelize.DATE,
         defaultValue: new Date()
       },
       updatedAt: {
-        field: 'update_at',
-        allowNull: false,
+        field: 'updatedAt',
+        allowNull: true,
         type: Sequelize.DATE,
         defaultValue: new Date()
       }

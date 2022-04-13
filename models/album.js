@@ -34,10 +34,11 @@ module.exports = (sequelize, DataTypes) => {
         key: 'id'
       }
     }
+
   }, {
     sequelize,
     modelName: 'Album',
-    tableName: 'ablums'
+    tableName: 'albums'
   });
   return Album;
 };
