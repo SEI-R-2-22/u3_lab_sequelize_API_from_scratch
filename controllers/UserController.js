@@ -30,7 +30,6 @@ const CreateUser = async (req, res) => {
       id: userId,
       ...req.body
     }
-    console.log(req.body)
     let newUser = await User.create(newUserBody)
     res.send(newUser)
   } catch (error) {
