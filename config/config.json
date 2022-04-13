@@ -1,0 +1,20 @@
+{
+  "development": {
+    "database": "food_reviews",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "define": {
+      "underscored": true
+    }
+  },
+  "test": {
+    "database": "food_reviews_test",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "database": "food_reviews_production",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
