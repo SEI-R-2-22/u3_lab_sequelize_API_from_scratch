@@ -11,15 +11,15 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       Pokemon.hasMany(models.Moves,{
-        foreignKey:'pokemon_id',
+        foreignKey:'moves_id',
         onDelete: 'CASCADE',
       })
-      Pokemon.belongsToMany(models.Zone,{
+      Pokemon.belongsTo(models.Zone,{
         foreignKey:'zone_id',
         onDelete: 'CASCADE',
       })
 
-      // define association here
+      // define association here`
     }
   }
   Pokemon.init({

@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here`
       Zone.hasMany(models.Pokemon,{
-        foreignKey:'pokemon_id',
+        foreignKey:'id',
         onDelete: 'CASCADE',
       })
     }

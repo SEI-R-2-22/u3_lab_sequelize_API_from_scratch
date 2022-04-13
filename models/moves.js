@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Moves.belongsToMany(models.Pokemon,{
+      Moves.belongsTo(models.Pokemon,{
         foreignKey:'pokemon_id',
         onDelete: 'CASCADE',
       })
