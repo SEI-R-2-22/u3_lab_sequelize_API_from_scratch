@@ -1,0 +1,20 @@
+{
+  "development": {
+
+    "database": "pernproj_development",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+
+    "database": "pernproj_test",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+
+    "database": "pernproj_production",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
