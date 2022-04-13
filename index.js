@@ -11,4 +11,4 @@ app.use(express.json())
 
 app.get('/', (req, res) => res.json({ message: 'Bork Bork Im a server' }))
 app.use('/api', AppRouter)
-app.listen(PORT, () => console.log(`Server Started On Port: ${PORT}`))
+app.listen(PORT, () => console.log(`Server Borkin' On Port: ${PORT}`))

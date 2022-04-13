@@ -1,3 +1,3 @@
 const Router = require('express').Router()
 
-moduele.exports = Router
+module.exports = Router
