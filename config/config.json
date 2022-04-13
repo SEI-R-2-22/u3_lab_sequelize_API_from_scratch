@@ -1,0 +1,17 @@
+{
+  "development": {
+    "database": "livemas_pet_care_development",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "database": "livemas_pet_care_test",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "database": "livemas_pet_care_production",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
