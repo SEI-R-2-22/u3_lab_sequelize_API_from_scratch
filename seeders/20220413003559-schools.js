@@ -15,25 +15,3 @@ module.exports = {
     await queryInterface.bulkDelete('schools')
   }
 }
-
-// module.exports = {
-//   up: (queryInterface, Sequelize) => {
-//     return queryInterface.bulkInsert(
-//       'schools',
-//       [
-//         {
-//           name: 'General Assembly',
-//           population: 3000,
-//           uniform: false,
-//           createdAt: new Date(),
-//           updatedAt: new Date()
-//         }
-//       ],
-//       {}
-//     )
-//   },
-
-//   down: (queryInterface, Sequelize) => {
-//     return queryInterface.bulkDelete('schools', null, {})
-//   }
-// }

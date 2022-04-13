@@ -23,30 +23,3 @@ module.exports = {
     await queryInterface.bulkDelete('childrens')
   }
 }
-
-// const { children, sequelize } = require('../models')
-// const falso = require('@ngneat/falso')
-
-// module.exports = {
-//   up: (queryInterface, Sequelize) => {
-//     return children = await Promise.all()
-//       queryInterface.bulkInsert(
-//       'childrens',
-//       [
-//         {
-//           name: 'Billy Ray',
-//           schoolName: 'General Assembly',
-//           parents: 'John Doe',
-//           parentsId: 1,
-//           createdAt: new Date(),
-//           updatedAt: new Date()
-//         }
-//       ],
-//       {}
-//     )
-//   },
-
-//   down: (queryInterface, Sequelize) => {
-//     return queryInterface.bulkDelete('childrens', null, {})
-//   }
-// }
