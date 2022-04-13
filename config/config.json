@@ -1,0 +1,20 @@
+{
+  "development": {
+    "database": "nab_east_development",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "define": {
+      "underscored": true
+    }
+  },
+  "test": {
+    "database": "nab_east_test",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "database": "nab_east_production",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
