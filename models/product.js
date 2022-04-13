@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
         onDelete: 'CASCADE',
         onUpdate: 'CASCADE'
       })
-      Comment.belongsTo(models.Category, {
+      Product.belongsTo(models.Category, {
         foreignKey: 'category_id',
         as: 'category',
         onDelete: 'CASCADE',
