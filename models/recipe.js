@@ -1,6 +1,6 @@
 'use strict';
 const {
-  Model
+  Model, STRING
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class Recipe extends Model {
@@ -21,6 +21,10 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       type: DataTypes.STRING
     },
+    ingredient: {
+      allowNull: false,
+      type: DataTypes.STRING
+    },
     categoryId: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -29,7 +33,7 @@ module.exports = (sequelize, DataTypes) => {
       references: {
         model: 'categories',
         key: 'id'
-      }
+      },
     }
   }, {
     sequelize,
