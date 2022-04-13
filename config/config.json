@@ -1,0 +1,20 @@
+{
+  "development": {
+    "database": "api_from_scratch_development",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "define": {
+      "underscored":false
+    }
+  },
+  "test": {
+    "database": "api_from_scratch_test",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "database": "api_from_scratch_production",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
