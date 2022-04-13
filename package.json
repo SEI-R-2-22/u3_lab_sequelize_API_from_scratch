@@ -4,7 +4,6 @@
   "description": "![Baloo](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthumbs.gfycat.com%2FEmbellishedWideEastrussiancoursinghounds-size_restricted.gif&f=1&nofb=1)",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon app.js",
     "start": "node app.js"
   },
@@ -26,5 +25,8 @@
     "express": "^4.17.3",
     "pg": "^8.7.3",
     "sequelize": "^6.19.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
   }
 }
