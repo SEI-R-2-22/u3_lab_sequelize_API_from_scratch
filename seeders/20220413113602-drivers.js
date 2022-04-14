@@ -10,7 +10,9 @@ module.exports = {
         return {
           name: falso.randFirstName(),
           age: falso.randNumber({ min: 21, max: 70 }),
-          car_id: car.id
+          carId: car.id,
+          createdAt: new Date(),
+          updatedAt: new Date()
         }
       })
     )

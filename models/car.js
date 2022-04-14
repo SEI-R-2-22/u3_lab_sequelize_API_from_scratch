@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      Car.hasOne(models.Driver)
+      Car.hasOne(models.Driver, { foreignKey: 'carId'})
       Car.belongsTo(models.CarDealer, { foreignKey: 'carDealerId' })
     }
   }
@@ -20,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
     carPrice: DataTypes.INTEGER,
     carDealerId: {
       type: DataTypes.INTEGER,
-      field: 'car_dealer_Id',
+      field: 'carDealerId',
       onDelete: 'CASCADE',
       reference: {
         model: 'car_dealers',

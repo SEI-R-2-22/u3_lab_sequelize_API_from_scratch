@@ -10,7 +10,9 @@ module.exports = {
           carBrand: falso.randVehicleModel(),
           carType: falso.randVehicleType(),
           carPrice: falso.randNumber({ min: 1000, max: 100000 }),
-          car_dealer_Id: car_dealer.id
+          carDealerId: car_dealer.id,
+          createdAt: new Date(),
+          updatedAt: new Date()
         }
       })
     )
