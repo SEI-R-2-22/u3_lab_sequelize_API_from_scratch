@@ -11,8 +11,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      const Recipe = sequelize.define('recipe', { name: DataTypes.STRING })
       Recipe.belongsTo(models.Category)
-      const Recipe = sequelize.define('Recipe', { name: DataTypes.STRING })
       Recipe.belongsToMany(models.Ingredient, { through: 'RecipeIngredients' })
     }
   }

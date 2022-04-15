@@ -12,6 +12,10 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING
       },
+      ingredient: {
+        allowNull: false,
+        type: Sequelize.STRING
+      },
       categoryId: {
         type: Sequelize.INTEGER,
         allowNull: false,
