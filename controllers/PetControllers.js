@@ -10,7 +10,7 @@ const getAllPets = async (req, res) => {
     }
 }
 
-const GetPetDetails = async (req, res) => {
+const getPetDetails = async (req, res) => {
     try {
         const petDeets = await Pets.findByPk(req.params.petid)
         res.send(petDeets)
@@ -43,4 +43,23 @@ const editPetInfo = async (req, res) => {
     } catch (error) {
         throw error
     }
+}
+
+const deletePet = async (req, res) => {
+    try {
+        let petId = parseInt(req.params.pet_id)
+
+        await Pets.destroy({ where: {id: petId }})
+        res.send({ message: `We're sorry to see pet ${petId} go!`})
+    } catch (error) {
+        throw error
+    }
+}
+
+module.exports = {
+    deletePet,
+    editPetInfo,
+    addNewPet,
+    getPetDetails,
+    getAllPets
 }

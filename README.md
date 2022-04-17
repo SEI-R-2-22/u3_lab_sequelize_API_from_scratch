@@ -28,8 +28,10 @@ Your goal is to create a Node/Express/Sequelize server that can be queried exter
 - Create `routes` and `controllers` folders with an `AppRouter.js` in your Routes folder
 - Set up your server entry point like this:
 ```js
-const app = require('express')()
+const express = require('express')
 const cors = require('cors')
+
+const app = express()
 
 const AppRouter = require('./routes/AppRouter')
 
@@ -37,6 +39,7 @@ const PORT = process.env.PORT || 3001
 
 app.use(cors())
 app.use(express.json())
+app.use(express.urlencoded({ extended: truew }))
 
 app.get('/', (req, res) => res.json({ message: 'Server Works' }))
 app.use('/api', AppRouter)
