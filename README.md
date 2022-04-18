@@ -13,7 +13,7 @@ In this lab, we'll be building our very own Express Sequelize API from nothing! 
 Your goal is to create a Node/Express/Sequelize server that can be queried externally. To test this, you'll need Insomnia.
 
 ## Recommended Process
-- Create an ERD to establish what sort of models you'll want to be working with. **(No more than `3` models should be created)**.
+- Create an ERD to establish what sort of models you'll want to be working with. **(Exactly `3` models should be created)**.
 - Create an entry point by `touching` either `server.js`, `app.js`, or `index.js`
 - `npm init -y` to initialize your project with Node
 - `npm i pg sequelize express cors body-parser` to install proper dependencies
@@ -39,7 +39,7 @@ const PORT = process.env.PORT || 3001
 
 app.use(cors())
 app.use(express.json())
-app.use(express.urlencoded({ extended: truew }))
+app.use(express.urlencoded({ extended: true }))
 
 app.get('/', (req, res) => res.json({ message: 'Server Works' }))
 app.use('/api', AppRouter)
@@ -47,7 +47,7 @@ app.listen(PORT, () => console.log(`Server Started On Port: ${PORT}`))
 ```
 
 ## Requirements
-- Your API should have at least 3 models with associations between them
+- Your API should have exactly 3 models with associations between them
 - At least one model should have queries for full CRUD functionality
 
 ## Recap
