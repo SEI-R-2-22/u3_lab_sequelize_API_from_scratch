@@ -1,0 +1,14 @@
+{
+  "development": {
+    "database": "Mice_development",
+    "dialect": "postgres"
+  },
+  "test": {
+    "database": "Mice_test",
+    "dialect": "postgres"
+  },
+  "production": {
+    "database": "Mice_production",
+    "dialect": "postgres"
+  }
+}
